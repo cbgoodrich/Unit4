@@ -5,7 +5,7 @@
 from random import randint
 from ggame import *
 
-def mouseClick():
+def mouseClick(event):
     num = randint(1,3)
     
     if num == 1:
