@@ -2,11 +2,10 @@
 #10/16/17
 #printnStars.py - prints the number of stars
 
-def printnStars():
+def printnStars(n):
     i = 1
-    n = int(input("Enter number of stars: "))
     while i <= n:
         print("*"*i)
         i += 1
 
-printnStars()
+printnStars(6)
