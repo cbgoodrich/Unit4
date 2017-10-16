@@ -3,8 +3,7 @@
 #vprint.py - prints the letters in a word
 
 def vprint():
-    word = input("Enter a word: ")
-    for ch in word:
+    for ch in "Charlie":
         print(ch)
 
 vprint()
