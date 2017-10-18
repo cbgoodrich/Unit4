@@ -5,9 +5,12 @@
 from random import randint
 
 def randevenint(low, high):
-    return randint(low, high)
+    num = randint(low, high)
+    while num%2 == 1: #while the number is odd
+        num = randint(low, high)
+    return num
     
-    
+
 r1 = randevenint(1, 100)
 r2 = randevenint(1, 100)
 r3 = randevenint(1, 100)
