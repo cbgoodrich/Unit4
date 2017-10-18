@@ -5,7 +5,7 @@
 from math import sqrt
 
 def distance(x1, y1, x2, y2):
-    print(sqrt((x2-x1)**2 + (y2-y1)**2))
-    
-distance(0,0, 1,1)
+    return (sqrt((x2-x1)**2 + (y2-y1)**2))
+
+print(distance(3, 4, -5, 2))
     
