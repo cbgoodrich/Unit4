@@ -32,12 +32,21 @@ def moveDown(event):
         monkey.y += CELL_SIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
+            updateScore()
 
 def moveBanana():
     banana.x = randint(0, COLS-1)*CELL_SIZE
     banana.y = randint(0, ROWS-1)*CELL_SIZE
 
+def updateScore():
+    data["score"] += 10
+    
+    print(data["score"])
+
 if __name__ == "__main__":
+    
+    data = {}
+    data["score"] = 0
     
     green = Color(0x006600, 1)
     brown = Color(0x8B4513, 1)
