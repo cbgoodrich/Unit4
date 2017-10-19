@@ -5,10 +5,7 @@
 def stringUnion(word1, word2):
     total = " "
     for ch in word1:
-        total += ch
-    for ch in word2:
-        total += ch
-        
-    print(total)
+        if ch in word1 and ch in word2:
+            return ch
     
-stringUnion("high", "kite")
+print(stringUnion("high", "height"))
