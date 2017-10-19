@@ -6,7 +6,7 @@ from ggame import *
 
 #constants
 ROWS = 27
-COLS = 50
+COLS = 51
 CELL_SIZE = 20
 
 def moveRight(event):
