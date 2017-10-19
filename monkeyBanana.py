@@ -5,8 +5,8 @@
 from ggame import *
 
 #constants
-ROWS = 28
-COLS = 52
+ROWS = 26
+COLS = 50
 CELL_SIZE = 20
 
 def moveRight(event):
@@ -22,7 +22,7 @@ def moveUp(event):
         monkey.y -= CELL_SIZE
 
 def moveDown(event):
-    if monkey.y < (ROWS - 1)*CELL_SIZE:
+    if monkey.y < (ROWS-1)*CELL_SIZE:
         monkey.y += CELL_SIZE
 
 if __name__ == "__main__":
