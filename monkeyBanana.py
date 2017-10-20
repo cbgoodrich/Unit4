@@ -4,6 +4,7 @@
 
 from ggame import *
 from random import randint
+
 #constants
 ROWS = 26
 COLS = 50
