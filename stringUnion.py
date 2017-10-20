@@ -4,4 +4,3 @@
 
 def stringUnion(word1, word2):
     total = " "
-    print("greg is gay")
