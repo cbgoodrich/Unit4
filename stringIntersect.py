@@ -2,17 +2,15 @@
 #10/20/17
 #stringIntersect.py - prints out the letters in both strings
 
-def stringIntersect("word1", "word2"):
+def stringIntersect(word_1, word_2):
     total = " "
-    for ch in word1:
-        if not ch in total:
-            total += ch
-            
+    word1 = word_1.lower()
+    word2 = word_2.lower()
     for ch in word2:
-        if not ch in total:
+        if ch in word1:
             total += ch
-    
+
     return total
 
-total = stringUnion("mississippi", "pennsylvania")
+total = stringIntersect("Mississippi", "Pennsylvania")
 print(total)
