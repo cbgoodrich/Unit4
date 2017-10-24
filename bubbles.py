@@ -8,8 +8,8 @@ from random import randint
 def mouseClick(event):
     radius = randint(1, 100)
     colorCode = randint(1, 3)
-    pos.x = randint(0, 700)
-    pos.y = randint(0, 500)
+    x_pos = randint(0, 700)
+    y_pos = randint(0, 500)
 
     
     if colorCode == 1:
@@ -21,6 +21,8 @@ def mouseClick(event):
     else:
         blue = Color(0x0000FF, 1)
         bubble = CircleAsset(radius, LineStyle(1, blue), blue)
-        
-        
     
+    Sprite(bubble, (x_pos, y_pos))
+    
+App().listenMouseEvent("click", mouseClick)
+App().run()
