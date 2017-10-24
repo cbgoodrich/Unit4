@@ -17,6 +17,8 @@ while True:
     ans = num1 * num2
     if guess == ans:
         correctCounter += 1
+    else:
+        print("Incorrect. Try again")
     if correctCounter == 5:
         message()
         break
