@@ -8,7 +8,8 @@ def message():
     print("Watch out world. Here comes the next great multiplier!")
 
 correctCounter = 0
-while True:
+i = 1
+while i<6:
     num1 = randint(1, 12)
     num2 = randint(1, 12)
     print(num1, "x", num2, "=")
@@ -16,6 +17,7 @@ while True:
     ans = num1 * num2
     if guess == ans:
         correctCounter += 1
-    if guess == "stop":
-        break
+    if correctCounter == 5:
+        message()
+    i += 1
     
