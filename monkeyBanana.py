@@ -60,7 +60,7 @@ def updateScore():
 #moves the banana if more than 150 frames have passed
 def step():
     data["frames"] += 1
-    if data["frames"] == 150:
+    if data["frames"] == 200:
         moveBanana()
         
 
