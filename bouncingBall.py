@@ -34,11 +34,11 @@ if __name__ == "__main__":
     black = Color(0x000000, 1)
     blackOutline = LineStyle(1, black)
     
-    ball = CircleAsset(RADIUS, greenOutline, green)
+    greenCircle = CircleAsset(RADIUS, greenOutline, green)
     background = RectangleAsset(WINDOW_X, WINDOW_Y, blackOutline, black)
     
     Sprite(background)
-    Sprite(ball, (ball.x, ball.y))
+    ball = Sprite(greenCircle, (ball.x, ball.y))
     
     App().run(step)
     
