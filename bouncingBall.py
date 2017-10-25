@@ -37,7 +37,7 @@ if __name__ == "__main__":
     background = RectangleAsset(1000, 600, blackOutline, black)
     
     Sprite(background)
-    Sprite(ball, (ball_x, ball_y_))
+    Sprite(ball, (ball_x, ball_y))
     
     App().run()
     
