@@ -5,29 +5,29 @@
 from ggame import *
 
 #CONSTANTS
-WINDOW_X = 1000
-WINDOW_Y = 600
+WINDOW_X = 800
+WINDOW_Y = 475
 PIXEL_MOVE = 25
 RADIUS = 50
 
 
 
 def moveBall():
-    ball.x += PIXEL_MOVE
-    ball.y += PIXEL_MOVE
+    ball.x += data["direction"]
+    ball.y += data["direction"]
     
 def step():
-    if ball.x >= WINDOW_X or ball.y >= 475:
-        PIXEL_MOVE = PIXEL_MOVE * (-1)
+    if ball.x < WINDOW_X and ball.y < WINDOW_Y:
         moveBall()
     else:
+        data["direction"] *= -1
         moveBall()
     
 
 if __name__ == "__main__":
     
     data = {}
-    data["direction"] = 0
+    data["direction"] = 25
     
     #Colors
     green = Color(0x00FF00, 1)
@@ -43,7 +43,6 @@ if __name__ == "__main__":
     ball = Sprite(greenCircle, (RADIUS, RADIUS))
     
     App().run(step)
-    
     
 
     
