@@ -21,12 +21,16 @@ def step():
         moveBall()
     elif ball.x >= WINDOW_X:
         data["direction x"] *= -1
+        data["direction y"] += 0
     elif ball.y >= WINDOW_Y:
         data["direction y"] *= -1
+        data["direction x"] += 0
     elif ball.x <= 0:
         data["direction x"] *= -1
+        data["direction y"] += 0
     elif ball.y <= 0:
         data["direction y"] *= -1
+        data["direction x"] += 0
         
     
 
