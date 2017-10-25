@@ -8,17 +8,18 @@ from ggame import *
 WINDOW_X = 1000
 WINDOW_Y = 600
 PIXEL_MOVE = 25
+RADIUS = 50
 
 #ball starting coordinates
-ball_x = 50
-ball_y = 50
+ball.x = RADIUS
+ball.y = RADIUS
 
 def moveBall():
-    ball_x += PIXEL_MOVE
-    ball_y += PIXEL_MOVE
+    ball.x += PIXEL_MOVE
+    ball.y += PIXEL_MOVE
     
 def step():
-    if ball_x < WINDOW_X and ball_y < WINDOW_Y:
+    if ball.x < WINDOW_X and ball.y < WINDOW_Y:
         moveBall()
     else:
         PIXEL_MOVE = PIXEL_MOVE * (-1)
@@ -33,12 +34,12 @@ if __name__ == "__main__":
     black = Color(0x000000, 1)
     blackOutline = LineStyle(1, black)
     
-    ball = CircleAsset(50, greenOutline, green)
-    background = RectangleAsset(1000, 600, blackOutline, black)
+    ball = CircleAsset(RADIUS, greenOutline, green)
+    background = RectangleAsset(WINDOW_X, WINDOW_Y, blackOutline, black)
     
     Sprite(background)
-    Sprite(ball, (ball_x, ball_y))
+    Sprite(ball, (ball.x, ball.y))
     
-    App().run()
+    App().run(step)
     
     
