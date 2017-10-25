@@ -10,9 +10,7 @@ WINDOW_Y = 600
 PIXEL_MOVE = 25
 RADIUS = 50
 
-#ball starting coordinates
-ball.x = RADIUS
-ball.y = RADIUS
+
 
 def moveBall():
     ball.x += PIXEL_MOVE
@@ -28,6 +26,7 @@ def step():
 
 if __name__ == "__main__":
     
+
     #Colors
     green = Color(0x00FF00, 1)
     greenOutline = LineStyle(1, green)
@@ -38,7 +37,7 @@ if __name__ == "__main__":
     background = RectangleAsset(WINDOW_X, WINDOW_Y, blackOutline, black)
     
     Sprite(background)
-    ball = Sprite(greenCircle, (ball.x, ball.y))
+    ball = Sprite(greenCircle, (RADIUS, RADIUS))
     
     App().run(step)
     
