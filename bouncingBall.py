@@ -10,15 +10,15 @@ WINDOW_Y = 600
 PIXEL_MOVE = 25
 
 #ball starting coordinates
-ball_x = 0
-ball_y = 0
+ball_x = 50
+ball_y = 50
 
 def moveBall():
     ball_x += PIXEL_MOVE
     ball_y += PIXEL_MOVE
     
 def step():
-    if ball_x < 1000 and ball_y < 600:
+    if ball_x < WINDOW_X and ball_y < WINDOW_Y:
         moveBall()
     else:
         PIXEL_MOVE = PIXEL_MOVE * (-1)
