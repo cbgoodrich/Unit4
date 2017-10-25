@@ -26,12 +26,15 @@ def step():
 
 if __name__ == "__main__":
     
-
+    data = {}
+    data["direction"] = 0
+    
     #Colors
     green = Color(0x00FF00, 1)
     greenOutline = LineStyle(1, green)
     black = Color(0x000000, 1)
     blackOutline = LineStyle(1, black)
+    
     
     greenCircle = CircleAsset(RADIUS, greenOutline, green)
     background = RectangleAsset(WINDOW_X, WINDOW_Y, blackOutline, black)
@@ -40,5 +43,8 @@ if __name__ == "__main__":
     ball = Sprite(greenCircle, (RADIUS, RADIUS))
     
     App().run(step)
+    
+    
+
     
     
