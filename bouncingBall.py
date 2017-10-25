@@ -17,10 +17,10 @@ def moveBall():
     ball.y += PIXEL_MOVE
     
 def step():
-    if ball.x > WINDOW_X or ball.y > WINDOW_Y:
+    if ball.x >= WINDOW_X or ball.y >= WINDOW_Y:
+        PIXEL_MOVE = PIXEL_MOVE * (-1)
         moveBall()
     else:
-        PIXEL_MOVE = PIXEL_MOVE * (-1)
         moveBall()
     
 
