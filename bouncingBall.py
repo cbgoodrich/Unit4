@@ -3,42 +3,21 @@
 #bouncingBall.py - makes a ball move around the screen
 
 from ggame import *
-
-#CONSTANTS
-WINDOW_X = 1000
-WINDOW_Y = 525
-PIXEL_MOVE = 25
-RADIUS = 50
-
-
-
 def moveBall():
     ball.x += data["direction x"]
     ball.y += data["direction y"]
     
-def step():
-    if ball.x < WINDOW_X and ball.y < WINDOW_Y:
-        moveBall()
-    elif ball.x >= WINDOW_X:
-        data["direction x"] *= -1
-        data["direction y"] += 0
-    elif ball.y >= WINDOW_Y:
+    if ball.y == 50 or ball.y == 500:
         data["direction y"] *= -1
-        data["direction x"] += 0
-    elif ball.x <= 0:
+    if ball.x == 50 or ball.x == 1000:
         data["direction x"] *= -1
-        data["direction y"] += 0
-    elif ball.y <= 0:
-        data["direction y"] *= -1
-        data["direction x"] += 0
-        
     
 
 if __name__ == "__main__":
     
     data = {}
-    data["direction x"] = 25
-    data["direction y"] = 25
+    data["direction x"] = 10
+    data["direction y"] = 10
     
     #Colors
     green = Color(0x00FF00, 1)
@@ -47,13 +26,13 @@ if __name__ == "__main__":
     blackOutline = LineStyle(1, black)
     
     
-    greenCircle = CircleAsset(RADIUS, greenOutline, green)
-    background = RectangleAsset(WINDOW_X, WINDOW_Y, blackOutline, black)
+    greenCircle = CircleAsset(50, greenOutline, green)
+    background = RectangleAsset(1050, 600, blackOutline, black)
     
     Sprite(background)
-    ball = Sprite(greenCircle, (RADIUS, RADIUS))
+    ball = Sprite(greenCircle, (50, 50))
     
-    App().run(step)
+    App().run(moveBall)
     
 
     
