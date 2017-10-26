@@ -11,7 +11,6 @@ def moveBall():
         data["direction y"] *= -1
     if ball.x == 50 or ball.x == 1000:
         data["direction x"] *= -1
-    
 
 if __name__ == "__main__":
     
