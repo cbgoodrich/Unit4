@@ -9,7 +9,7 @@ WINDOW_X = 1000
 WINDOW_Y = 526
 RADIUS = 25
 PADDLE_X = 20
-PADDLE_Y = 80
+PADDLE_Y = 160
 
 def moveBall():
     
