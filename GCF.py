@@ -4,9 +4,9 @@
 
 def GCF(num1, num2):
     small = min(num1, num2)
-    for i in range(10, 0, -1):
+    for i in range(small, 0, -1):
         if num1%i == 0 and num2%i == 0:
             return i
 
-print(GCF(10,12))
+print(GCF(10,17))
     
