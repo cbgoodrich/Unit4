@@ -21,20 +21,20 @@ def moveBall():
     if ball.x < 25 or ball.x > WINDOW_X - 25:
         data["direction x"] *= -1
         
-def moveP1Up(event):
+def moveP2Up(event):
     if paddleLeft.y > 0:
         paddleLeft.y -= PADDLE_Y
 
-def moveP1Down(event):
-    if paddleLeft.y < WINDOW_Y:
+def moveP2Down(event):
+    if paddleLeft.y < WINDOW_Y - PADDLE_Y:
         paddleLeft.y += PADDLE_Y
         
-def moveP2Up(event):
+def moveP1Up(event):
     if paddleRight.y > 0:
         paddleRight.y -= PADDLE_Y
 
-def moveP2Down(event):
-    if paddleRight.y < WINDOW_Y:
+def moveP1Down(event):
+    if paddleRight.y < WINDOW_Y - PADDLE_Y:
         paddleRight.y += PADDLE_Y
 
 
