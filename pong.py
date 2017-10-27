@@ -23,19 +23,19 @@ def moveBall():
         
 def moveP2Up(event):
     if paddleLeft.y > 0:
-        paddleLeft.y -= PADDLE_Y
+        paddleLeft.y -= PADDLE_Y/2
 
 def moveP2Down(event):
     if paddleLeft.y < WINDOW_Y - PADDLE_Y:
-        paddleLeft.y += PADDLE_Y
+        paddleLeft.y += PADDLE_Y/2
         
 def moveP1Up(event):
     if paddleRight.y > 0:
-        paddleRight.y -= PADDLE_Y
+        paddleRight.y -= PADDLE_Y/2
 
 def moveP1Down(event):
     if paddleRight.y < WINDOW_Y - PADDLE_Y:
-        paddleRight.y += PADDLE_Y
+        paddleRight.y += PADDLE_Y/2
 
 
 
