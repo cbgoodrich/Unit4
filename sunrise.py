@@ -7,6 +7,7 @@ from ggame import *
 def moveSun():
     ball.x += data["direction x"]
     ball.y += data["direction y"]
+    
 
 if __name__ == "__main__":
     
@@ -22,7 +23,7 @@ if __name__ == "__main__":
     yellowOrb = CircleAsset(50, LineStyle(1, yellow), yellow)
     
     Sprite(sky)
-    sun = Sprite(yellowOrb, (525, 600))
+    sun = Sprite(yellowOrb, (900, 400))
     
     App().run(moveSun)
     
