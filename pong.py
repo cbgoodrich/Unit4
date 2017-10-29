@@ -20,6 +20,12 @@ def moveBall():
         data["direction y"] *= -1
     if ball.x < 25 or ball.x > WINDOW_X - 25:
         data["direction x"] *= -1
+    if ball.y >= paddleLeft.y and ball.y <= (paddleLeft.y + PADDLE_Y) and ball.x <= PADDLE_X:
+        data["direction y"] *= -1
+        data["direction x"] *= -1
+    if ball.y >= paddleRight.y and ball.y <= (paddleRight.y + PADDLE_Y) and ball.x >= (WINDOW_X - PADDLE_X):
+        data["direction y"] *= -1
+        data["direction x"] *= -1
         
 def moveP2Up(event):
     if paddleLeft.y > 0:
@@ -43,8 +49,8 @@ def moveP1Down(event):
 if __name__ == "__main__":
     
     data = {}
-    data["direction x"] = 10
-    data["direction y"] = 7.5
+    data["direction x"] = 5
+    data["direction y"] = 3.75
     
     green = Color(0x00FF00, 1)
     black = Color(0x000000, 1)
