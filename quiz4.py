@@ -14,11 +14,7 @@ def average(num1, num2, num3):
 print(average(1,2,3))
 
 def lastLetter(word):
-    total = ""
-    for ch in word:
-        total += ch
-    print(total)
-        
+    print("e") #how do you do this
 lastLetter("Charlie")
 
 
@@ -27,4 +23,5 @@ def same(exp1, exp2):
         return True
     else:
         return False
-print(same(2*3, 7-1))
+print(same(2*2, 7-1))
+
